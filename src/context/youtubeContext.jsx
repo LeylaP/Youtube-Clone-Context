@@ -28,7 +28,7 @@ export const YoutubeProvider = ({ children }) => {
   const fetchCategory = (category) => {
     axios
       .get(`https://youtube138.p.rapidapi.com/search/?q=${category}`, options)
-      .then((res) => console.log(res.data.contents))
+      .then((res) => setVideos(res.data.contents))
       .catch((err) => console.log(err));
   };
 

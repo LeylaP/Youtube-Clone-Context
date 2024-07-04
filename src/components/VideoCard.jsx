@@ -1,5 +1,6 @@
 import React from "react";
 import millify from "millify";
+import { Link } from "react-router-dom";
 
 const VideoCard = ({ video }) => {
   console.log(video);
@@ -30,7 +31,7 @@ const VideoCard = ({ video }) => {
           <p>{video.author.title}</p>
 
           <div className="flex gap-3">
-            <p>{millify(video.stats.views, { locales: "tr-" })}</p>
+            <p>{millify(video.stats.views)}</p>
             <p>{video.poblishedTimeText}</p>
           </div>
         </div>
